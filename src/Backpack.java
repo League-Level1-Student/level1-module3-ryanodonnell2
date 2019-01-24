@@ -116,93 +116,6 @@ class Textbook extends Supply
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-int gravity = 2;
-float v = .25;
-float y = 0;
-float upV = 0;
-int pipeX = 600;
-int lowerY;
-int speed;
-int gap = 175;
-int upperPipeHeight = (int) random(100, 300);
-int bottomPipeHeight = (int) random(500, 100);
-
-void setup(){
-  size(600, 500);
-  
-}
-void draw(){
-  if (keyPressed) {
-    if (key == '1') {
-      gravity = 2;
-    }
-    if (key == '2') {
-       gravity = 4;
-    }
-    if (key == '3') {
-       gravity = 6;
-    }
-  }
-  speed = gravity;
-  background(255, 212, 147);
-  fill(163, 255, 195);
-  stroke(255, 255, 255);
-  ellipse(150, y, 25, 25);
-  if(y<465 && upV<0.01) {
-  y = y + gravity + v;
-  v = v + v/16;
-  }
-  else if(upV>.01) {
-    y = y - gravity - 2*upV;
-    upV = upV - .05;
-    ellipse(150, y, 25, 25);
-    v = .25;
-  }  
-  if(y < 470){
-    y = y+2;
-  }
-  if(y>15){
-    y = y-2;
-  }
-  if(mousePressed){
-    upV=1.15;
-  }
-  
-  
-  fill(10, 200, 10);
-  
-  rect(pipeX, 0, 65, upperPipeHeight);
-  lowerY = upperPipeHeight + gap;
-  rect(pipeX, lowerY, 65, bottomPipeHeight);
-  pipeX = pipeX - speed;
-  if(pipeX < -6){
-    upperPipeHeight = (int) random(100, 300);
-    pipeX = 600;
-  }
   
   
   
@@ -212,6 +125,5 @@ void draw(){
   
   
   
-  
-}
+
 

@@ -28,9 +28,19 @@ public class Jukebox implements Runnable {
            public void run() {
 
 		// 3. Find an mp3 on your computer or on the Internet.
+        	   
 		// 4. Create a Song
-
+        	   Song Halo = new Song("Halo.mp3");
+        	   Song KSP1 = new Song("Brittle Rille.mp3");
+        	   Song KSP2 = new Song("Sneaky Adventure.mp3");
+        	   Song Tri = new Song("triangles.mp3");
+        	   Song Just = new Song("JUST.mp3");
+        	   
+        	   
+        	   
 		// 5. Play the Song
+        	   Just.play();
+        	   
 
 		/*
 		 * 6. Create a user interface for your Jukebox so that the user can to
